@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  transform: {
-    '^.+\\.ts?$': 'ts-jest',
-  },
+  preset: 'ts-jest', // Fügt die richtige Jest-Voreinstellung für TypeScript hinzu
   testEnvironment: 'node',
-  testRegex: './src/.*\\.(test|spec)?\\.(ts|ts)$',
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest', // Erlaubt die Verarbeitung von TypeScript-Dateien
+  },
+  testMatch: ['<rootDir>/src/**/*.spec.ts'], // Nutze `testMatch` statt `testRegex`
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   roots: ['<rootDir>/src'],
 };
