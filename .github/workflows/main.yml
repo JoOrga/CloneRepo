@@ -26,10 +26,10 @@ jobs:
         run: npm install
 
       - name: Run Linter
-        run: npm lint
+        run: yarn lint
 
       - name: Run Tests
-        run: npm test
+        run: yarn test
 
       - name: Build Project
-        run: npm build
+        run: yarn build
