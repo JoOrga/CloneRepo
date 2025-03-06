@@ -1,7 +1,10 @@
-export const transform = {
-  '^.+\\.ts?$': 'ts-jest',
+// eslint-disable-next-line no-undef
+module.exports = {
+  transform: {
+    '^.+\\.ts?$': 'ts-jest',
+  },
+  testEnvironment: 'node',
+  testRegex: './src/.*\\.(test|spec)?\\.(ts|ts)$',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  roots: ['<rootDir>/src'],
 };
-export const testEnvironment = 'node';
-export const testRegex = './src/.*\\.(test|spec)?\\.(ts|ts)$';
-export const moduleFileExtensions = ['ts', 'tsx', 'js', 'jsx', 'json', 'node'];
-export const roots = ['<rootDir>/src'];
