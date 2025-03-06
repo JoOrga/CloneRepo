@@ -10,7 +10,7 @@ on:
 
 jobs:
   ci:
-    runs-on: self-hosted 
+    runs-on: [selfrunner]
 
     steps:
       - name: Checkout Repository
